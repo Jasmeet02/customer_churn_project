@@ -48,7 +48,7 @@ This project builds an end‑to‑end machine learning solution to predict churn
 
 ### 1. Clone Repository
 ```bash
-git clone https://github.com/Jasmeet02/Data-Science-Assignment
+git clone https://github.com/Jasmeet02/customer_churn_project
 cd customer-churn-prediction
 
 ### 2. Install Dependencies
