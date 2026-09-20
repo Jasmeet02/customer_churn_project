@@ -44,33 +44,52 @@ This project builds an end‑to‑end machine learning solution to predict churn
 
 ---
 
+## Video Link
+
+https://nagarro-my.sharepoint.com/personal/jasmeet_kaur02_nagarro_com/_layouts/15/stream.aspx?id=%2Fpersonal%2Fjasmeet%5Fkaur02%5Fnagarro%5Fcom%2FDocuments%2FNAGP%5FAI%5FDS%5FVideos%2FCustomer%5FChurn%5FPrediction%5FDemo%2Emp4&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&ga=1&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E75fbd567%2Ddc9c%2D4bd4%2Db115%2D6fd77bc37ae2)
+
+---
+
 ## 🚀 Setup Instructions
 
 ### 1. Clone Repository
 ```bash
 git clone https://github.com/Jasmeet02/customer_churn_project
 cd customer-churn-prediction
+```
 
 ### 2. Install Dependencies
+```bash
 python -m venv .venv
 source .venv/bin/activate   # On Windows: .venv\Scripts\activate
 pip install -r requirements.txt
+```
 
 ### 3. Run Jupyter Notebook
+```bash
 jupyter notebook notebook/churn_analysis.ipynb
+```
 
 ### 4. Train & Save Model
 Running the notebook will generate:
-model/preprocessor.pkl
-model/churn_model.pkl
+- `model/preprocessor.pkl`
+- `model/churn_model.pkl`
 
 ### 5. Start Flask API
-
+```bash
 python app.py
+```
+
+### 6. Test the API
+Open a second terminal and run:
+```bash
+python test_request.py
+```
+This sends the sample payload from `sample_request.json` to the running Flask API at `http://127.0.0.1:5000/predict`.
 
 ## Project Structure
 
-data-science/
+customer_churn_project/
 │── data/
 │   └── TelcoCustomerChurn.csv
 │── notebook/
@@ -82,7 +101,8 @@ data-science/
 │── requirements.txt
 │── README.md
 │── sample_request.json
-│── test_request.json
+── sample_request2.json
+│── test_request.py
 
 
 
